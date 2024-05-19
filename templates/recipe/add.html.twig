@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvelle Recette{% endblock %}
+
+{% block body %}
+
+{# {{form(form)}} affiche le form en entier #}
+
+    {# affiche le début du form #}
+    {{form_start(form)}}
+
+    {# affiche les champs du form #}
+    {{ form_row(form.title) }} 
+    {{ form_row(form.slug)  }}
+    {{ form_row(form.content) }} 
+    {{ form_row(form.duration) }}
+
+    {{ form_row(form.save) }} 
+    {# {{form_rest(form)}} affiche le reste du form #}
+    
+    {# ferme le form #}
+    {{form_end(form)}}  
+    
+
+{% endblock %}

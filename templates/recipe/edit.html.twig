@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recette{% endblock %}
+
+{% block body %}
+
+    {# {{form(form)}} affiche le form en entier #}
+    {{form_start(form)}} {# affiche le début du form #}
+    <div class="d-flex">
+        {{ form_row(form.title) }} 
+        {{ form_row(form.slug) }}
+    </div>
+    {{form_rest(form)}} {# affiche le reste du form #}
+    {{form_end(form)}}  {# affiche la fin du form #}
+    
+
+{% endblock %}

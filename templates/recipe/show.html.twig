@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title "Recette : " ~ recipes.title %}
+
+{% block body %}
+
+<h1>{{ recipes.title ~ " en " ~ recipes.duration ~ " min " }} </h1>
+<p>
+    {{ recipes.content | nl2br}}
+</p> 
+{# {{ recipes.duration }}  #}
+{% endblock %}
